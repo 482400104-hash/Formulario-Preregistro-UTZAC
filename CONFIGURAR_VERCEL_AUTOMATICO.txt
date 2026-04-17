@@ -1,0 +1,176 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║               🚀 CONEXIÓN AUTOMÁTICA VERCEL + NEON (1 MINUTO)                   ║
+║                        Ya hice todo el código, ahora solo                       ║
+║                       necesito tus 3 credenciales de acceso                     ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ VERIFICACIÓN DEL ESTADO ACTUAL:
+
+  ✓ Código React actualizado y funcional
+  ✓ API Serverless lista (registrar, registros, status)
+  ✓ Tabla "prospecto" creada en Neon
+  ✓ vercel.json configurado correctamente
+  ✓ package.json con todas las dependencias
+  ✓ Todo sincronizado en GitHub
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔐 NECESITO 3 DATOS DE TI:
+
+1. VERCEL TOKEN (de tu cuenta Vercel)
+   ├─ Ve a: https://vercel.com/account/tokens
+   ├─ Click "Create Token"
+   ├─ Dale un nombre: "Setup Neon Integration"
+   ├─ Copia el token completo (comienza con "prj_" o similar)
+   └─ ⚠️ Nunca compartas este token públicamente
+
+2. PROJECT ID de tu Vercel
+   ├─ Ve a: https://vercel.com/dashboard
+   ├─ Selecciona tu proyecto
+   ├─ En Settings → General
+   ├─ Busca "Project ID"
+   ├─ Se ve así: QmFzc3N0b20xLWN0eS0yNjk...
+   └─ Copia el ID completo
+
+3. NEON CONNECTION STRING (de tu base de datos)
+   ├─ Ve a: https://console.neon.tech/
+   ├─ Selecciona tu proyecto
+   ├─ En Connection String
+   ├─ Busca el formato: postgresql://user:password@host/db?ssl=require
+   ├─ Copia TODO (incluye el ?sslmode=require y todo lo demás)
+   └─ Debe ser exacto
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚡ UNA VEZ TENGAS LOS 3 DATOS:
+
+Ejecuta esto en tu terminal:
+
+  node setup-vercel.js <tu-vercel-token> "<tu-neon-connection-string>" <tu-project-id>
+
+EJEMPLO (con valores ficticios):
+
+  node setup-vercel.js prj_abc123xyz "postgresql://user:pass@ep-purple.neon.tech/db?ssl=require" QmFzc3N0b20xLWN0eS0yNjk
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚙️ QUÉ HARÁ EL SCRIPT:
+
+✓ Validará tu proyecto en Vercel
+✓ Agregará la variable NEON_CONNECTION_STRING
+✓ Activará la variable en: Production, Preview, Development
+✓ Iniciará un redeploy automático
+✓ Toda la API quedará conectada con Neon
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 TIMELINE:
+
+  0-1 min:   Ejecuta el script
+  1-5 min:   Vercel hace deploy con la nueva variable
+  5+ min:    Tu app estará en línea conectada con Neon
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🧪 DESPUÉS DE TERMINAR:
+
+1. Abre tu app: https://[tu-proyecto].vercel.app
+2. Llena el formulario
+3. Click "Registrar"
+4. ✓ Verás: "✓ Registro exitoso! ID: [número]"
+5. ✓ Los datos aparecerán en la tabla
+6. ✓ Los datos se guardaron en Neon PostgreSQL ☁️
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 INSTRUCCIONES PASO A PASO:
+
+PASO 1: OBTENER VERCEL TOKEN
+┌────────────────────────────────────────────────────────────────────┐
+│ 1. Abre: https://vercel.com/account/tokens                         │
+│ 2. Click "Create Token"                                            │
+│ 3. Nombre: "Setup Neon Integration"                                │
+│ 4. Expiration: "7 days" (o más)                                    │
+│ 5. Click "Create"                                                  │
+│ 6. COPIA el token que aparece (único momento que lo ves)           │
+│ 7. Guarda en un lugar seguro                                       │
+└────────────────────────────────────────────────────────────────────┘
+
+PASO 2: OBTENER PROJECT ID
+┌────────────────────────────────────────────────────────────────────┐
+│ 1. Abre: https://vercel.com/dashboard                              │
+│ 2. Selecciona tu proyecto                                          │
+│ 3. Ve a: Settings (abajo a la izquierda)                           │
+│ 4. En "General" busca "Project ID"                                 │
+│ 5. COPIA el ID completo                                            │
+│ 6. Parece algo así: QmFzc3N0b20xLWN0eS0yNjk...                    │
+└────────────────────────────────────────────────────────────────────┘
+
+PASO 3: OBTENER NEON CONNECTION STRING
+┌────────────────────────────────────────────────────────────────────┐
+│ 1. Abre: https://console.neon.tech/                                │
+│ 2. Login con tu cuenta                                             │
+│ 3. Selecciona tu proyecto                                          │
+│ 4. Click en "Connection string"                                    │
+│ 5. Verifica que diga: postgresql://...                             │
+│ 6. COPIA TODO (incluye ?ssl= y todo lo demás)                      │
+│ 7. Debe verse así:                                                 │
+│    postgresql://neondb_owner:npg_xxx@ep-purple...?ssl=require     │
+└────────────────────────────────────────────────────────────────────┘
+
+PASO 4: EJECUTAR EL SCRIPT
+┌────────────────────────────────────────────────────────────────────┐
+│ En terminal (PowerShell):                                          │
+│                                                                    │
+│ cd c:\Users\karen\Desktop\my-react-app                             │
+│                                                                    │
+│ node setup-vercel.js "VERCEL_TOKEN" "NEON_CONNECTION" "PROJECT_ID"│
+│                                                                    │
+│ REEMPLAZA:                                                         │
+│ - VERCEL_TOKEN = Tu token de Vercel                                │
+│ - NEON_CONNECTION = Tu connection string completo                  │
+│ - PROJECT_ID = Tu project ID de Vercel                             │
+│                                                                    │
+│ NOTA: Encierra la connection string entre comillas dobles         │
+└────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE:
+
+✓ El token es secreto: NO lo compartas ni lo subas a GitHub
+✓ La connection string también es privada
+✓ Después de ejecutar el script, el deploy tarda 2-5 minutos
+✓ Verifica que NEON_CONNECTION_STRING esté en Vercel Settings
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔗 LINKS RÁPIDOS:
+
+  Tokens Vercel:      https://vercel.com/account/tokens
+  Dashboard Vercel:   https://vercel.com/dashboard
+  Console Neon:       https://console.neon.tech/
+  Tu Repo:            https://github.com/482400104-hash/Formulario-Preregistro-UTZAC
+
+═══════════════════════════════════════════════════════════════════════════════
+
+❓ SI TIENES DUDAS:
+
+1. Verifica que uses el token COMPLETO (sin espacios)
+2. Verifica que la connection string sea EXACTA
+3. Verifica que el PROJECT_ID sea correcto
+4. Si el script falla, muestra el error y lo arreglamos
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 RESUMEN:
+
+Tu código = 100% listo ✓
+Neon database = Tabla creada ✓
+Lo que falta = Solo agregar la variable de entorno en Vercel
+
+Con los 3 datos y el script, todo quedará conectado automáticamente.
+
+═══════════════════════════════════════════════════════════════════════════════
