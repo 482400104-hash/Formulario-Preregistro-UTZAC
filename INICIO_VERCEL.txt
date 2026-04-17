@@ -1,0 +1,166 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    ✅ TODO ESTÁ LISTO PARA VERCEL ✅                           ║
+║              Tabla creada en Neon | API lista | Código actualizado             ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 VERIFICACIÓN FINAL:
+
+✓ Tabla "prospecto" CREADA en Neon PostgreSQL
+✓ Formulario React actualizado y funcional
+✓ Serverless functions configurados (api/registrar.js, api/registros.js, api/status.js)
+✓ App.jsx con auto-detección de ambiente (localhost vs Vercel)
+✓ vercel.json con configuración correcta
+✓ package.json con dependencia de "pg"
+✓ Setup script ejecutado: setup-neon-db.js ✓
+✓ Todo sincronizado en GitHub
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 PRÓXIMO PASO: DEPLOY A VERCEL (10 MINUTOS)
+
+Solo necesitas 5 pasos en el dashboard de Vercel:
+
+┌─ PASO 1: ABRIR VERCEL ────────────────────────────────────────────┐
+│ URL: https://vercel.com/dashboard                                 │
+│ Login con GitHub (si no tienes cuenta, click "Sign Up")          │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 2: IMPORTAR PROYECTO ───────────────────────────────────────┐
+│ 1. Click en "Add New" → "Project"                                 │
+│ 2. Vercel muestra tus repositorios                                │
+│ 3. Busca: "Formulario-Preregistro-UTZAC"                          │
+│ 4. Click "Import"                                                  │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 3: CONFIGURAR BUILD (Automático) ───────────────────────────┐
+│ Vercel detecta automáticamente:                                   │
+│ • Framework: Vite                                                  │
+│ • Build Command: npm run build                                    │
+│ • Output Directory: dist                                          │
+│                                                                    │
+│ SOLO CLICK "Deploy"                                               │
+│                                                                    │
+│ ⏳ ESPERA: 2-5 MINUTOS (Vercel construye automáticamente)        │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 4: AGREGAR VARIABLE DE ENTORNO ⚠️ IMPORTANTE ──────────────┐
+│ MIENTRAS se está haciendo el deploy:                              │
+│                                                                    │
+│ 1. En tu proyecto Vercel → Settings                               │
+│ 2. Busca → "Environment Variables"                                │
+│ 3. Click "Add New Environment Variable"                           │
+│ 4. Rellena EXACTAMENTE:                                           │
+│                                                                    │
+│    Name: NEON_CONNECTION_STRING                                   │
+│    Value: postgresql://neondb_owner:npg_Oh0NikDgM3Wu@[...url...]  │
+│                                                                    │
+│ 5. En "Environments" marca:                                       │
+│    ☑️ Production                                                   │
+│    ☑️ Preview                                                      │
+│    ☑️ Development                                                  │
+│                                                                    │
+│ 6. Click "Save"                                                    │
+│                                                                    │
+│ 📌 NOTA: Tu connection string de Neon lo encuentras en:           │
+│    https://console.neon.tech/ → Copia la URL completa            │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 5: REDEPLOY (para aplicar la variable) ──────────────────────┐
+│ Como agregaste variables DESPUÉS de hacer deploy inicial:        │
+│                                                                    │
+│ 1. En tu proyecto → Deployments                                   │
+│ 2. Click el menú "..." del último deploy                          │
+│ 3. Select "Redeploy"                                              │
+│ 4. Confirma "Yes, redeploy"                                       │
+│ 5. ⏳ ESPERA: 1-2 MINUTOS                                         │
+│                                                                    │
+│ ✅ LISTO: Tu app estará en: https://[nombre-proyecto].vercel.app │
+└───────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🧪 VERIFICAR QUE FUNCIONA:
+
+1. Abre tu URL: https://[nombre-proyecto].vercel.app
+2. Deberías ver el formulario
+3. Llena los datos:
+   - Nombre: Tu nombre
+   - Email: tu@email.com
+   - (Los demás campos son opcionales)
+4. Click "Registrar"
+5. ✓ Deberías ver: "✓ Registro exitoso! ID: [número]"
+6. ✓ El registro aparecerá en la tabla de abajo
+7. ✓ Los datos se guardaron en Neon PostgreSQL ☁️
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔍 ¿DÓNDE OBTENER TU CONNECTION STRING DE NEON?
+
+1. Ve a: https://console.neon.tech/
+2. Login con tu cuenta
+3. Selecciona tu proyecto (la base de datos)
+4. En la página principal, encontrarás:
+   "Connection string" o "psql"
+5. Busca el formato:
+   postgresql://user:password@host:port/database?ssl=require...
+6. COPIA TODO (con el ?sslmode=require y todo lo demás)
+7. Este es el valor para NEON_CONNECTION_STRING
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 FLUJO COMPLETO DE DATOS:
+
+Formulario (React)
+        ↓
+    (localhost:5173 o vercel.app)
+        ↓
+    API POST /api/registrar
+        ↓
+    Neon PostgreSQL (en la nube)
+        ↓
+    Tabla "prospecto" con tus datos
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE:
+
+✓ La variable NEON_CONNECTION_STRING DEBE estar en Vercel Settings
+✓ Sin ella, el deploy funcionará pero no podrá guardar en Neon
+✓ Después de agregar la variable, DEBE hacer Redeploy
+✓ Los registros locales (registros.json) solo funciona en localhost:3001
+✓ En Vercel, los datos van a Neon PostgreSQL (no registros.json)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 RESUMEN DE URLS IMPORTANTES:
+
+GitHub Repo:
+  https://github.com/482400104-hash/Formulario-Preregistro-UTZAC
+
+Vercel Dashboard:
+  https://vercel.com/dashboard
+
+Neon Console (para obtener connection string):
+  https://console.neon.tech/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+❓ SI ALGO NO FUNCIONA:
+
+1. Verifica que NEON_CONNECTION_STRING esté en Vercel Settings
+2. Verifica que sea EXACTAMENTE: postgresql://... con todo incluido
+3. Verifica que hayas hecho REDEPLOY después de agregar la variable
+4. Verifica que la tabla "prospecto" existe en Neon
+   (Ya la creamos con setup-neon-db.js ✓)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 ¡LISTO PARA COMENZAR!
+
+Abre: https://vercel.com/dashboard
+
+Tu aplicación estará en línea en menos de 10 minutos.
+
+═══════════════════════════════════════════════════════════════════════════════
