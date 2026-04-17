@@ -15,9 +15,9 @@ export default async function handler(req, res) {
 
   try {
     const { Client } = await import('pg');
-    const { name, email, telefono, escuela, carrera, tipo } = req.body;
+    const { nombre, email, telefono, escuela, carrera, tipo } = req.body;
 
-    if (!name || !email) {
+    if (!nombre || !email) {
       return res.status(400).json({
         error: 'Nombre y email requeridos'
       });
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
       VALUES ($1, $2, $3, $4, $5, $6)
       ON CONFLICT (email) DO NOTHING
       RETURNING id
-    `, [name, email, telefono || null, escuela || null, carrera || null, tipo || 'no_especificado']);
+    `, [nombre, email, telefono || null, escuela || null, carrera || null, tipo || 'no_especificado']);
 
     await client.end();
 
