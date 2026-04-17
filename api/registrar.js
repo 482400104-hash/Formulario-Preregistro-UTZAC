@@ -1,5 +1,4 @@
-import pkg from 'pg';
-const { Client } = pkg;
+import { Client } from 'pg';
     const { nombre, email, telefono, escuela, carrera, tipo } = req.body;
 
     if (!nombre || !email) {
