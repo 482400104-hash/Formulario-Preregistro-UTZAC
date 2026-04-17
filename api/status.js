@@ -13,8 +13,7 @@ export default async function handler(req, res) {
     const { Client } = await import('pg');
     
     const client = new Client({
-      connectionString: process.env.NEON_CONNECTION_STRING,
-      ssl: { rejectUnauthorized: false }
+      connectionString: process.env.NEON_CONNECTION_STRING
     });
 
     await client.connect();
