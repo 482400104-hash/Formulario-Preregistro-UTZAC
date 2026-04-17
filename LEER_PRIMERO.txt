@@ -1,0 +1,35 @@
+🚀 APLICACIÓN LISTA PARA VERCEL
+════════════════════════════════════════════════════════════════
+
+✅ COMPLETADO:
+  ✓ Código en GitHub
+  ✓ API Serverless (api/registrar.js, etc.)
+  ✓ React app actualizada
+  ✓ vercel.json configurado
+  ✓ Base de datos Neon PostgreSQL
+
+════════════════════════════════════════════════════════════════
+
+⏱️ PRÓXIMOS PASOS (5 MINUTOS):
+
+1. Ve a: https://vercel.com/dashboard
+
+2. Click "Add New" → "Project"
+
+3. Selecciona "Formulario-Preregistro-UTZAC"
+
+4. Click "Import"
+
+5. Espera el deploy automático (2-5 min)
+
+6. Settings → Environment Variables
+   Agrega: NEON_CONNECTION_STRING = [tu_valor]
+
+7. Redeploy
+
+════════════════════════════════════════════════════════════════
+
+Tu aplicación estará en:
+  https://[nombre-proyecto].vercel.app
+
+¡Listo! 🎉
