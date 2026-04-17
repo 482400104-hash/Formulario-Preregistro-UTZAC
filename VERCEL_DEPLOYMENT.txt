@@ -1,0 +1,152 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                  🚀 VERCEL DEPLOYMENT - INSTRUCCIONES FINALES                   ║
+║                    TODO ESTÁ LISTO - SOLO NECESITAS HACER CLICK                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+✅ STATUS: 100% LISTO PARA VERCEL
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📦 LO QUE ESTÁ EN GITHUB:
+
+✓ Código React + Vite
+✓ API Serverless (api/registrar.js, api/registros.js, api/status.js)
+✓ Configuración Vercel (vercel.json)
+✓ package.json con "pg" en dependencies
+✓ Todo sincronizado en: https://github.com/482400104-hash/Formulario-Preregistro-UTZAC
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⏱️ PASOS PARA DEPLOYAR (5-10 MINUTOS):
+
+┌─ PASO 1: ABRIR VERCEL ────────────────────────────────────────────┐
+│ Ve a: https://vercel.com/dashboard                                │
+│ Inicia sesión con GitHub (si no tienes cuenta, click "Sign Up")  │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 2: IMPORTAR PROYECTO ───────────────────────────────────────┐
+│ 1. Click en "Add New" → "Project"                                 │
+│ 2. Vercel te mostrará tus repositorios de GitHub                  │
+│ 3. Busca "Formulario-Preregistro-UTZAC"                           │
+│ 4. Click "Import"                                                  │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 3: CONFIGURAR BUILD ────────────────────────────────────────┐
+│ Debería estar así (detecta automáticamente):                      │
+│ • Framework: Vite                                                  │
+│ • Build Command: npm run build                                    │
+│ • Output Directory: dist                                          │
+│ • Install Command: npm install                                   │
+│                                                                    │
+│ CLICK "Deploy"                                                    │
+│                                                                    │
+│ ⏳ ESPERA 2-5 MINUTOS (Vercel construye automáticamente)         │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 4: AGREGAR VARIABLE DE ENTORNO ⚠️ IMPORTANTE ──────────────┐
+│ MIENTRAS se hace el deploy:                                       │
+│                                                                    │
+│ 1. En tu proyecto Vercel, ve a: Settings                          │
+│ 2. Busca: Environment Variables                                   │
+│ 3. Click "Add New Environment Variable"                           │
+│ 4. Rellena:                                                        │
+│    Name: NEON_CONNECTION_STRING                                   │
+│    Value: [TU CONNECTION STRING DE NEON]                          │
+│                                                                    │
+│ 5. En "Environments" selecciona:                                  │
+│    ☑️ Production                                                   │
+│    ☑️ Preview                                                      │
+│    ☑️ Development                                                  │
+│                                                                    │
+│ 6. Click "Save"                                                    │
+└───────────────────────────────────────────────────────────────────┘
+
+┌─ PASO 5: REDEPLOY ────────────────────────────────────────────────┐
+│ Como agregaste variables DESPUÉS de hacer deploy:                 │
+│                                                                    │
+│ 1. Ve a: Deployments                                              │
+│ 2. Click en el menú "..." del último deploy                       │
+│ 3. Select "Redeploy"                                              │
+│ 4. Confirma "Yes, redeploy"                                       │
+│ 5. ⏳ ESPERA 1-2 MINUTOS                                          │
+└───────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 ¡LISTO!
+
+Tu aplicación estará en:
+  https://[nombre-proyecto].vercel.app
+
+Ejemplo: https://mi-formulario.vercel.app
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔍 VERIFICAR QUE FUNCIONA:
+
+1. Ve a: https://[tu-proyecto].vercel.app
+2. Deberías ver tu formulario React
+3. Llena los datos y presiona "Registrar"
+4. Deberías ver: "✓ Registro exitoso"
+5. Los datos se guardaron en Neon PostgreSQL ☁️
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🗝️ OBTENER TU CONNECTION STRING DE NEON:
+
+1. Ve a: https://console.neon.tech/
+2. Selecciona tu proyecto
+3. En la página principal, encontrarás:
+   "Connection string"
+4. Cópialo completo (incluye postgresql://... y todo lo demás)
+5. Usa este valor en NEON_CONNECTION_STRING
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 URLS IMPORTANTES:
+
+Tu Repositorio GitHub:
+  https://github.com/482400104-hash/Formulario-Preregistro-UTZAC
+
+Vercel Dashboard:
+  https://vercel.com/dashboard
+
+Neon Console:
+  https://console.neon.tech/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⏩ RESUMEN RÁPIDO:
+
+✅ GitHub: https://github.com/482400104-hash/Formulario-Preregistro-UTZAC
+✅ Código listo para Vercel
+✅ API Serverless configurada
+✅ vercel.json listo
+✅ package.json con "pg"
+
+⏳ TU TURNO:
+1. Abre https://vercel.com/dashboard
+2. Importa "Formulario-Preregistro-UTZAC"
+3. Agrega variable NEON_CONNECTION_STRING
+4. ¡Listo!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 CUANDO TERMINE:
+
+Tu aplicación será:
+  ✓ Pública en la nube (URL compartible)
+  ✓ Disponible 24/7 (sin necesidad de tu PC encendida)
+  ✓ Con base de datos Neon PostgreSQL
+  ✓ Escalable (Vercel maneja el tráfico)
+  ✓ Gratis (con límites generosos)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+¿LISTO?
+
+👉 ABRE: https://vercel.com/dashboard
+
+Tu aplicación estará en línea en 10 minutos. 🚀
+
+═══════════════════════════════════════════════════════════════════════════════
