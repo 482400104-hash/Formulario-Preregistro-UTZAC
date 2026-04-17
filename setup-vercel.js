@@ -5,7 +5,8 @@
  * Uso: node setup-vercel.js <vercel-token> <neon-connection-string> <project-id>
  */
 
-const https = require('https');
+import https from 'https';
+
 const args = process.argv.slice(2);
 
 if (args.length < 3) {
