@@ -12,7 +12,7 @@ function VideoPage({ video, regresar }) {
       </video>
       <br />
       <button className="btn btn-secondary mt-3 rounded-pill px-4" onClick={regresar}>
-        ← Volver al Panel
+        ← Volver 
       </button>
     </div>
   );
@@ -163,18 +163,18 @@ function MyForm() {
             <div className="col-md-4 mb-3 mb-md-0 border-start border-end border-secondary">
               <h6 className="fw-bold text-utzac">Equipo de Desarrollo</h6>
               <ul className="list-unstyled small mb-0">
-                <li>Nava Ledezma E. A.</li>
-                <li>Medrano Esquivel A. K.</li>
-                <li>Valdez Chompa J. I.</li>
+                <li>Nava Ledezma Emily Aylin.</li>
+                <li>Medrano Esquivel Ana Karen </li>
+                <li>Valdez Chompa Jaziel Isai.</li>
               </ul>
             </div>
             <div className="col-md-4">
-              <img src="/carrera.png" alt="Logo Carrera" style={{ height: "60px", marginBottom: "10px" }} />
-              <p className="small mb-0">Ingeniería en Desarrollo de Software</p>
+              
+              <p className="small mb-0">Ingeniería en Tecnologías de la Información</p>
             </div>
           </div>
           <hr className="my-4" style={{ opacity: 0.1 }} />
-          <p className="mb-0 small text-muted">© 2026 Proyecto Integrador - Smart Campus UTZAC</p>
+          <p className="mb-0 small text-muted">© 2026 Proyecto Integrador - TRANSFORMACIÓN DIGITAL DE ESPACIOS UNIVERSITARIOS</p>
         </div>
       </footer>
     </>
